@@ -26,6 +26,18 @@ namespace PingPong.Models
             }
             return pingPongList;
         }
+
+        public List<object> DivisibleBy3And5Check(List<object> pingPongList)
+        {
+            for (int index = 0; index < pingPongList.Count; index++)
+            {
+                if (pingPongList[index] is int number && number % 5 == 0 && number % 3 == 0)
+                {
+                    pingPongList[index] = "ping-pong";
+                }
+            }
+            return pingPongList;
+        }
         public List<object> DivisibleBy3Check(List<object> pingPongList)
         {
             for (int index = 0; index < pingPongList.Count; index++)
